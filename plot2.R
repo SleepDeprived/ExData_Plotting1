@@ -12,8 +12,10 @@ createPlot2 <- function() {
   
   png("plot2.png", width = 480, height = 480, units="px")
   
-  # add code here to make plot
   plot(powerData$date_time, powerData$global_active_power, type = "n", xlab = "", ylab = "Global Active Power (kilowatts)")
+  points(powerData$date_time, powerData$global_active_power, col = "black", type = "l", cex = 0)
+  
+  dev.off()
   
 }
 
