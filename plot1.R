@@ -11,9 +11,11 @@ createPlot1 <- function() {
   powerData <- powerData[powerData$date <= as.Date("2007-02-02", format = "%Y-%m-%d"), ]
   rm(data)
   
+  png("plot1.png", width = 480, height = 480, units="px")
+  
   hist(powerData$global_active_power, col="red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 
-  png("plot1.png", width = 480, height = 480, units="px")
+  dev.off( )
   
 }
 

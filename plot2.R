@@ -10,10 +10,10 @@ createPlot2 <- function() {
   powerData <- powerData[powerData$date <= as.Date("2007-02-02", format = "%Y-%m-%d"), ]
   rm(data)
   
+  png("plot2.png", width = 480, height = 480, units="px")
+  
   # add code here to make plot
   plot(powerData$date_time, powerData$global_active_power, type = "n", xlab = "", ylab = "Global Active Power (kilowatts)")
-  
-  # add code here to make PNG  
   
 }
 
