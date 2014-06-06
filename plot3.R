@@ -12,11 +12,11 @@ createPlot3 <- function() {
   
   png("plot3.png", width = 480, height = 480, units="px")
   
-  plot(powerData$date_time, powerData$global_active_power, type = "n", xlab = "", ylab = "Energy sub metering")
+  plot(powerData$date_time, powerData$sub_metering_1, type = "n", xlab = "", ylab = "Energy sub metering")
   points(powerData$date_time, powerData$sub_metering_1, col = "black", type = "l", cex = 0)
   points(powerData$date_time, powerData$sub_metering_2, col = "red", type = "l", cex = 0)
   points(powerData$date_time, powerData$sub_metering_3, col = "blue", type = "l", cex = 0)
-  legend("topright", )
+  legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
   
   dev.off()
   
